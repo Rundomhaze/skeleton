@@ -1,5 +1,6 @@
 require('dotenv').config(); // для чтения .env файла
 require('@babel/register'); // бэбил для чтения jsx файлов
+const { sequelize } = require('./db/models'); // подключаем секвалайз для проверки соединения с бд
 
 const app = require('express')();
 const configApp = require('./config/configApp'); // подключаем конфиги со всеми стандартными МВ
@@ -28,6 +29,12 @@ app.use('/home', homeRoute);
 
 const PORT = process.env.PORT ?? 3000;
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`<<<<<<Server started on ${PORT} port>>>>>>>>`);
+  try {
+    await sequelize.authenticate();
+    console.log('<<<<<DB connection OK>>>>>>')
+  } catch (error) {
+    console.log(error.message);
+  }
 });
