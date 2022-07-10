@@ -26,7 +26,7 @@ authRouteApi.route('/auth/reg')
         plain: true,
       });
       res.write('<script>alert("User registred!")</script>')
-      res.end('<script>window.location.href="/"</script>')
+      res.end('<script>window.location.href="/auth/login"</script>')
     } catch(error) {}    
   });
 

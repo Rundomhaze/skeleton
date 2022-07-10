@@ -9,9 +9,10 @@ module.exports = function Navigation() {
 
         {user ? (
           <>
+            <li className="navigation__item"><a className="navigation_link" href="/">{user.userName}</a></li>
             <li className="navigation__item"><a className="navigation_link" href="/lc">Личный кабинет</a></li>
-            <li className="navigation__item"><a className="navigation_link" href="/logout">Выйти</a></li>
             <li className="navigation__item"><a className="navigation_link" href="/home">Главная</a></li>
+            <li className="navigation__item"><a className="navigation_link" href="/auth/logout">Выйти</a></li>
           </>
         )
           : (
