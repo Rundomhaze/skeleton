@@ -16,7 +16,7 @@ module.exports = function Navigation() {
         )
           : (
             <>
-              <li className="navigation__item"><a href="/auth">Регистрация</a></li>
+              <li className="navigation__item"><a href="/auth/reg">Регистрация</a></li>
               <li className="navigation__item"><a href="/auth/login">Войти</a></li>
               <li className="navigation__item"><a href="/home">Главная</a></li>
             </>

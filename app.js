@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
 });
 
 app.use('/home', homeRoute);
-// app.use('/auth', authRoute);
+app.use('/auth', authRoute);
 // app.use('/cardsList', cardsListRoute);
 
 // app.use('/cardsApi', cardsRouteApi);
-// app.use('/authApi', authRouteApi);
+app.use('/api', authRouteApi);
 
 
 
