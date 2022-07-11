@@ -5,8 +5,9 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Card extends Model {
     
-    static associate({User}) {
-     Card.belongsTo(User, {foreignKey: 'idUser'})
+    static associate({User, Photo}) {
+     Card.belongsTo(User, {foreignKey: 'idUser'}),
+     Card.hasMany(Photo, {foreignKey: 'idCard'})
     }
   }
   Card.init({

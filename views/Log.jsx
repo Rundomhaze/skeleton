@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Log() {
   return (
     <Layout>
-      <form method="post" action="/auth/login">
+      <form method="post" action="/auth/login" className="log__form">
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
           <input name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -14,7 +14,7 @@ module.exports = function Log() {
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
           <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
         </div>
-        <button type="submit" className="btn btn-primary">Войти</button>
+        <button type="submit" className="btn btn-primary">Login</button>
       </form>
     </Layout>
   );

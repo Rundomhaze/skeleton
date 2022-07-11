@@ -19,7 +19,7 @@ module.exports = function Layout({ title, children }) {
       </head>
       <body>
         <header className="header">
-          <img src="/img/logo.jpeg" alt="Лого" className="bar-img" />
+          <img src="/images/logo.jpeg" alt="Лого" className="bar-img" />
           <Navbar />
         </header>
         <main>

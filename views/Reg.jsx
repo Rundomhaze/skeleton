@@ -4,7 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Reg() {
   return (
     <Layout>
-      <form method="post" action="/api/auth/reg">
+      <form method="post" action="/api/auth/reg" className="log__form">
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Write your name</label>
           <input name="name" type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />

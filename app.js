@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeRoute);
 app.use('/auth', authRoute);
-// app.use('/cardsList', cardsListRoute);
+app.use('/cardsList', cardsListRoute);
 
 // app.use('/cardsApi', cardsRouteApi);
 app.use('/api', authRouteApi);
