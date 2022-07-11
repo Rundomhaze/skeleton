@@ -16,6 +16,10 @@ cardsRouteApi.route('/delete/:id')
     };
   });
 
-  // cardsRouteApi.route('/')
+  cardsRouteApi.route('/edit/:id')
+    .get(async (req, res) => {
+      const card = await Card.findOne({ where: { id: req.params.id } });
+      res.renderComponent(EditCard, { card });
+    });
 
 module.exports = cardsRouteApi;

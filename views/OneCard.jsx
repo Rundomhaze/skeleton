@@ -23,9 +23,6 @@ module.exports = function OneCard({ oneCard, allPhotosByOneCard }) {
 
         {user && (
           <div className="card__edit-buttons">
-            <a href={`/cardApi/edit/${oneCard.id}`} className="editCard edit__buttons edit__buttons-change" id={`${oneCard.id}`}>Изменить</a>
-            <a href={`/cardApi/delete/${oneCard.id}`} className="deleteCard edit__buttons edit__buttons-delete" id={`${oneCard.id}`}>Удалить</a>
-            <a href={`/cardApi/add/${oneCard.id}`} className="addCard edit__buttons edit__buttons-more" id={`${oneCard.id}`}>Добавить</a>
             <a href="/cardsList" className="addCard edit__buttons edit__buttons-more" id={`${oneCard.id}`}>Назад</a>
           </div>
         )}
