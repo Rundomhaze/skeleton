@@ -46,6 +46,10 @@ a {
 	opacity: 0.7!important;
 }
 
+.navigation_link_foot {
+	color: black;
+}
+
 .navigation__lists {
 	display: flex;
 	flex-direction: row;
