@@ -8,7 +8,6 @@ const configApp = require('./config/configApp'); // подключаем кон�
 const homeRoute = require('./routes/view/homeRoute'); // Роут для отрисовки домашней страницы
 const authRoute = require('./routes/view/authRoute'); // Роут для отрисовки страниц логин/логаут/регистрация
 const cardsListRoute = require('./routes/view/cardsListRoute'); // Отрисовка списка всех карточек
-
 const cardsRouteApi = require('./routes/api/cardsRouteApi'); // роут для CRUD-операций (изменение, добавление и удаление карточек)
 const authRouteApi = require('./routes/api/authRouteApi') // взаимодействие логина/логаута/реги с базой данных
 
@@ -21,8 +20,7 @@ app.get('/', (req, res) => {
 app.use('/home', homeRoute);
 app.use('/auth', authRoute);
 app.use('/cardsList', cardsListRoute);
-
-// app.use('/cardsApi', cardsRouteApi);
+app.use('/cardApi', cardsRouteApi);
 app.use('/api', authRouteApi);
 
 

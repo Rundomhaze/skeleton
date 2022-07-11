@@ -14,7 +14,8 @@ module.exports = {
         references: {
           model: 'Cards',
           key: 'id'
-        }
+        },
+        onDelete: 'cascade'
       },
       img_href: {
         allowNull: false,

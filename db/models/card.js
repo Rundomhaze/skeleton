@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   class Card extends Model {
     
     static associate({User, Photo}) {
-     Card.belongsTo(User, {foreignKey: 'idUser'}),
-     Card.hasMany(Photo, {foreignKey: 'idCard'})
+     Card.belongsTo(User, {foreignKey: 'idUser', onDelete: 'cascade'}),
+     Card.hasMany(Photo, {foreignKey: 'idCard',  onDelete: 'cascade'})
     }
   }
   Card.init({
