@@ -23,7 +23,7 @@ module.exports = function CardsList({ cards, onePhoto}) {
                 <a href={`/cardApi/edit/${card.id}`} className="editCard edit__buttons edit__buttons-change" id={`${card.id}`}>Изменить</a>
                 <a href={`/cardApi/delete/${card.id}`} className="deleteCard edit__buttons edit__buttons-delete" id={`${card.id}`}>Удалить</a>
                 <a href={`/cardsList/oneCardInfo/${card.id}`} className="infoCard edit__buttons edit__buttons-more" id={`${card.id}`}>Подробнее</a>
-                <a href={`/cardApi/add/${card.id}`} className="addCard edit__buttons edit__buttons-more" id={`${card.id}`}>Добавить</a>
+                <a href="/cardApi/add/" className="addCard edit__buttons edit__buttons-more" id={`${card.id}`}>Добавить</a>
               </div>
             )}           
             {!user &&

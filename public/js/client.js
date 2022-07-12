@@ -12,7 +12,7 @@ document.querySelector('.card__lists')?.addEventListener('click', async (event) 
   };
 });
 
-document.querySelector('.card__lists').addEventListener('click', async (event) => {
+document.querySelector('.card__lists')?.addEventListener('click', async (event) => {
   if (event.target.classList.contains('editCard')) {
     event.preventDefault();
     const url = event.target.href;

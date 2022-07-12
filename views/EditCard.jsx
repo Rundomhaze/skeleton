@@ -1,5 +1,4 @@
 const React = require('react');
-const Layout = require('./Layout');
 
 module.exports = function EditCard({ card }) {
   return (
@@ -11,9 +10,11 @@ module.exports = function EditCard({ card }) {
           <input id="" name="cardName" type="text" value={card.cardName} />
           <label htmlFor="songTitle_input">Описание: </label>
           <input id="songTitle_input" name="cardDesc" type="text" value={card.cardDesc} />
+          <label htmlFor="songTitle_input">Цена: </label>
+          <input id="songTitle_input" name="cardPrice" type="text" value={card.cardPrice} />
           <input type="submit" value="Сохранить" className="button btn_edit_form" />
         </form>
       </main>
     </div>
   );
-}
+};
