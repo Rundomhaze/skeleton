@@ -2,17 +2,19 @@ const React = require('react');
 const Layout = require('./Layout');
 const { Context } = require('../middlewares/ssr');
 
+
 module.exports = function CardsList({ cards, onePhoto}) {
   const { user } = React.useContext(Context);
   return (
     <Layout>
+   
       <main role="main">
         <ul className="card__lists">
           {cards.map((card, i) => (
 
             <li className="cardItem" id={`${card.id}`} key={card.id}>
               <img className="card_img" src={`${onePhoto[i].img_href}`} alt={`${card.cardName}`} id={`${card.id}`} />
-              <a href={`/cards/${card.id}`} className="titleCard">Название: {card.cardName}</a>              
+              <a href={`/cardsList/oneCardInfo/${card.id}`} className="titleCard">Название: {card.cardName}</a>              
               <p className="">Описание: {card.cardDesc}</p>
               <p className="">Цена: {card.cardPrice} $</p>
 

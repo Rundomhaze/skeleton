@@ -22,4 +22,3 @@ function reactSsrMiddleware(req, res, next) {
 
 module.exports = reactSsrMiddleware;
 module.exports.Context = Context;
-

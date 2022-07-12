@@ -16,10 +16,13 @@ module.exports = function OneCard({ oneCard, allPhotosByOneCard }) {
         <h1>
           {`${oneCard.cardPrice} $`}
         </h1>
-
+        <div className="photosOneCard">
         {allPhotosByOneCard.map((onePhoto) => (
+          <div className="album">
           <img src={`${onePhoto.img_href}`} />
+          </div>
         ))}
+        </div>
 
         {user && (
           <div className="card__edit-buttons">
